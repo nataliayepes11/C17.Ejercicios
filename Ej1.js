@@ -10,7 +10,6 @@ https://www.w3schools.com/jsref/jsref_touppercase.asp
 5. Devuelver un objeto con el nombre en mayúsculas y el promedio de las notas.
 */
 
-
 let estudiante = {
     nombre: "Natalia",
     edad: 45,
