@@ -9,3 +9,28 @@ Luego, escribe la función “procesarEstudiante” que tendrá como objetivo re
 https://www.w3schools.com/jsref/jsref_touppercase.asp
 5. Devuelver un objeto con el nombre en mayúsculas y el promedio de las notas.
 */
+
+
+let estudiante = {
+    nombre: "Natalia",
+    edad: 45,
+    notas: [4, 6, 7, 8, 9]
+};
+
+function procesarEstudiante(estudiante) {
+    estudiante.notas.push(10);  // quedarían 4, 6, 7, 8, 9, 10
+    estudiante.notas.shift();  // ahora serían 6, 7, 8, 9, 10
+
+let suma = estudiante.notas.reduce((acumulador, nota) => acumulador + nota, 0); // 6+7+8+9+10 = 40
+let promedio = suma / estudiante.notas.length; // 40/5=8
+
+let mayusculas = estudiante.nombre.toUpperCase(); // NATALIA
+
+return { 
+    nombre: mayusculas,
+    promedio: promedio
+};
+
+}
+console.log(procesarEstudiante(estudiante));
+
